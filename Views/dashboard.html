@@ -1,0 +1,34 @@
+﻿<div id="wrapper">
+    <!-- Navigation -->
+        <!-- /.row -->
+        <div class="row">
+
+            <div ng-repeat="x in Space" class="col-md-8">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-comments fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">{{x.title}}</div>
+                                <div class="ellipsis" title="{{x.description}}">{{x.description}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a>
+                        <div class="panel-footer">
+                            <span class="pull-left" style="cursor: pointer;" ng-click="deleteSpace(x.id)">Delete</span>
+                            <span class="pull-right" style="cursor: pointer;" ng-click="editSpace(x.id)">Edit</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary" ng-click="createSpace()">Create</button>
+        <!-- /.row -->
+</div>
+
+

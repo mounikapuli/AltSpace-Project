@@ -1,0 +1,30 @@
+/*!
+ * Start Bootstrap - SB Admin 2 v3.3.7+1 (http://startbootstrap.com/template-overviews/sb-admin-2)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+body {
+    background-color: black;
+}
+
+#wrapper {
+    width: 100%;
+    margin-left: 170px;
+}
+
+.ellipsis {
+    height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
+    white-space: nowrap;
+}
+
+.huge {
+    font-size: 40px;
+}
+
+h1{
+    color: white;
+    padding-left: 30%;
+}

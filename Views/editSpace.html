@@ -1,0 +1,58 @@
+﻿<div style="width: 100%; margin-top: 50px;">
+    <form name="editForm" class="form-horizontal editForm">
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="titleInput">*Title:</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="titleInput" ng-model="title" ng-required="true">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="descriptionInput">*Description:</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="descriptionInput" ng-model="description" ng-required="true"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="welcomeInput" ng-model="welcome">
+                        Welcome space
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="privateInput" ng-model="private">
+                        Private space
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="featuredInput" ng-model="featured">
+                        Featured space
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="membersInput">Members:</label>
+            <div class="col-sm-3">
+                <select class="form-control" id="membersInput" multiple="" ng-options="item.id as item.first_name for item in Users" ng-model="selectedUsers"></select>
+            </div>
+        </div>
+        <div style="padding-left: 17%;">
+            <button type="submit" class="btn btn-primary pull-left" style="margin-right: 10px;" ng-click="saveChanges()" ng-disabled="editForm.$invalid">Save</button>
+            <button type="button" class="btn btn-default pull-left cancelButton" ng-click="cancel()">Cancel</button>
+            <span class="col-sm-2 control-label" for="membersInput">* Mandatory Fields</span>
+        </div>
+
+    </form>
+</div>
